@@ -2,7 +2,47 @@
 
   **DSC(Developer Student Club)** is a official Technical club running in [Rajkiya Engineering College, Bijnor](http://recb.ac.in/) since 2019. DSCWEB is a web project to build website for **DSC club.**
 
-  ![dscweb](dscweb_image.png)
+---
+
+# DESKTOP VIEW
+
+- view 1
+
+  ![dscweb](static/images/Screenshot1.png)
+
+- view 2
+
+  ![dscweb](static/images/Screenshot2.png)
+
+- view 3
+
+  ![dscweb](static/images/Screenshot3.png)
+
+- view 4
+
+  ![dscblog](static/images/Screenshot4.png)
+  ---
+
+
+# MOBILE VIEW
+
+- **view 1**
+
+  ![dscweb](static/images/m1.jpeg)
+
+- **view 2**
+
+  ![dscweb](static/images/m2.jpeg)
+
+- **view 3**
+
+  ![dscweb](static/images/m3.jpeg)
+
+- **view 4**
+
+  ![dscweb](static/images/m4.jpeg)
+
+---
 
 ## Links:
 
@@ -14,28 +54,54 @@
 
 ## Project Status
 
-- Under Developement
+- Completed
 
 ## Project Details
 
-This project is built on the *Django Framework(3.0)*. This project is building by [Kumar Shanu](https://github.com/its-Kumar)(at Back-end Developement) and [Rajat Yadav](https://github.com/rajatyadav8540/)(at Front-end Development).
+This project is built on the *Django Framework(3.0)*. This project is build by [Developer Student Club Team](https://www.dscrecbijnor.com) headed by [Kumar Shanu](https://github.com/its-Kumar)(at Back-end Developement) and [Rajat Yadav](https://github.com/rajatyadav8540/)(at Front-end Development).
+
 
 ---
 
 ## Developement
 
-### Running the Server
+If you want to run the server in local make sure to turn on debug mode by modifying the line `DEBUG=False` to `DEBUG=True`.
 
-Make sure you have installed **python (3.7)** and **django**. If don't have download python from [here](https://python.org/) and run the command **` pip install django `** to install django.\
-If this doesn't work you can install all reuqirements once by using the **` pip install -r requirements.txt `** command. All requirements are mentioned in *`requirements.txt`* file.\
-After that run the server as follow-
+```python
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-```bash
-cd path/to/dir
-python manage.py runserver 8000
+ALLOWED_HOSTS = ["*"]
+
+# Application definition
 ```
 
-here 8000 is port number. you can use any port number you want.
+### Running the Server
+
+1. Run the following command to activate the environment:
+
+  ```bash
+  cd path/to/dir
+  pip install pipenv
+  pipenv shell
+  ```
+2. After that install all dependancies specified in Pipfile or Pipfile.lock :\
+`$ pipenv sync`
+
+3. Run the server using :
+  ```
+  python manage.py runserver 8000
+  or
+  pipenv run python manage.py runserver
+  ```
+  here 8000 is port number. you can use any port number you want.
+
+4. To install any package :
+  ```
+  pipenv install package_name
+  pipenv update  //run this at last
+  ```
+  It will automaticlly install the package and put it into requirements.
 
 ### Admin
 

@@ -1,12 +1,16 @@
+<!doctype html>
 {% load static %}
 
-<!doctype html>
 <html lang="en">
 
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description"
+			content="Developer Student Club is a technical club which is for the students, by the students and of the students. In today’s fast-growing world, technology is changing every second.DSC aims to bridge the gap between theoretical and practical knowledge for student.">
+		<meta name="keywords" content="DSCRECBijnor, developer student club bijnor, DSC Bijnor, DSCREC, DSC">
+		<meta name="author" content="Kumar Shanu">
 		<link href="{%static 'images/logo.png'%}" rel="icon" />
 
 		<!-- Bootstrap CSS -->
@@ -15,7 +19,6 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
 			integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
-		<link rel="stylesheet" href="{%static 'css/dscstyle.css'%}" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Bangers|Great+Vibes|Lobster|Permanent+Marker&display=swap"
 			rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
@@ -25,6 +28,7 @@
 		<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
 		<link rel="stylesheet" type="text/css" href="{%static 'styles/main_styles.css' %}">
 		<link rel="stylesheet" type="text/css" href="{%static 'styles/responsive.css' %}">
+		<link rel="stylesheet" href="{%static 'css/dscstyle.css'%}" type="text/css">
 
 		<!-- Animation -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -38,13 +42,14 @@
 		<script>
 			AOS.init();
 		</script>
-	<div class="super_container">
-		{% include 'navbar.html' %}
-		{% block content %}
-		replace me
-		{% endblock %}
-		{% include 'footer.html' %}
-	</div>
+		<div class="super_container">
+			{% include 'navbar.html' %}
+			{% include 'socialmedia.html' %}
+			{% block content %}
+			replace me
+			{% endblock %}
+			{% include 'footer.html' %}
+		</div>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -65,10 +70,6 @@
 		<script src="{%static 'plugins/easing/easing.js' %}"></script>
 		<script src="{%static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
 		<script src="{%static 'js/custom.js' %}"></script>
-
-		<div id="fb-root"></div>
-		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0"
-			nonce="EbZoo8P1"></script>
 	</body>
 
 </html>

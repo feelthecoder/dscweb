@@ -1,4 +1,6 @@
 from django import forms
+from django.forms.widgets import SelectDateWidget
+
 from .models import BlogPost, Comment
 
 
@@ -8,15 +10,14 @@ class BlogPostForm(forms.Form):
 
 
 class BlogModelForm(forms.ModelForm):
+    publish_date = forms.DateField(widget=SelectDateWidget)
+
     class Meta:
         model = BlogPost
-        fields = ['title', 'image', 'content', 'publish_date']
-        widgets = {
-            'publish_date': forms.DateInput(),
-        }
+        fields = ["title", "image", "content", "draft", "publish_date"]
 
     def clean_title(self, *arg, **kwargs):
-        title = self.cleaned_data.get('title')
+        title = self.cleaned_data.get("title")
         instance = self.instance
         print(instance)
         qs = BlogPost.objects.filter(title__iexact=title)
@@ -32,4 +33,4 @@ class BlogModelForm(forms.ModelForm):
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ['body']
+        fields = ["body"]

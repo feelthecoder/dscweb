@@ -1,0 +1,103 @@
+{%load static%}
+<style>
+  .socialmed {
+    position: fixed;
+    width: 10px;
+    margin-top: 150px;
+    transition: all 123s linear;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .4);
+    z-index: 10000;
+  }
+
+  .socialmed li {
+    height: 60px;
+    position: relative;
+    transition: all 1s linear;
+  }
+
+  .socialmed li a {
+    color: white;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 60px;
+    padding-left: 20%;
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
+    transition: all 1s linear;
+  }
+
+  .socialmed li:nth-child(1) a {
+    background: #4267B2;
+  }
+
+  .socialmed li:nth-child(2) a {
+    background: #1DA1F2;
+  }
+
+  .socialmed li:nth-child(3) a {
+    background: #E1306C;
+  }
+
+  .socialmed li:nth-child(4) a {
+    background: #2867B2;
+  }
+
+  .socialmed li:nth-child(5) a {
+    background: #333;
+  }
+
+  .socialmed li:nth-child(6) a {
+    background: #ff0000;
+  }
+
+  .socialmed li a i {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    font-size: 27px;
+  }
+
+  .socialmed ul li a span {
+    display: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .socialmed li:hover {
+    z-index: 10000;
+    width: 170px;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+    transition: all 1s linear;
+  }
+
+  .socialmed ul li:hover a span {
+    padding-left: 30%;
+    display: block;
+  }
+  @media screen and (max-width: 768px) {
+    .socialmed {
+      display: none;
+    }
+
+  }
+
+</style>
+
+<div class="socialmed">
+  <ul>
+    <li><a href="https://www.facebook.com/dscrecbijnor/" target="_blank"><i
+          class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+    <li><a href="https://twitter.com/DscRec" target="_blank"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+    <li><a href="https://www.instagram.com/dscrecbijnor/?igshid=b8dp92k5qnhu" target="_blank"><i
+          class="fab fa-instagram"></i><span>Instagram</span></a></li>
+    <li><a href="https://dscrecbijnor.blogspot.com/" target="_blank"><i class="fas fa-blog"></i><span>Blog</span></a>
+    </li>
+    <li><a href="https://github.com/Developer-Student-Club-Bijnor" target="_blank"><i
+          class="fab fa-github"></i><span>Github</span></a>
+    </li>
+    <li><a href="https://www.youtube.com/channel/UCF8ZVIfyf8u4w9SaYaUmezA" target="_blank"><i
+          class="fab fa-youtube"></i><span>Youtube</span></a></li>
+  </ul>
+</div>

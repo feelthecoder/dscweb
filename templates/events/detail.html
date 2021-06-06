@@ -1,0 +1,40 @@
+{%extends 'base.html' %}
+{% block doc_title%} - {{event.title}}{%endblock%}
+
+{%block content%}
+<div class="home" style="height: 100px;">
+    <div class="background_image"
+        style="background-image:url(https://images.unsplash.com/photo-1529465230221-a0d10e46fcbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80); position: fixed;">
+    </div>
+</div>
+<div class="container mt-5" style="padding-top: 25px;">
+
+    <div class="card border " style="margin-bottom: 1em;">
+        <div class="card-header py-0 ">
+
+
+            <h3 class="card-title text-center mt-2">{{ event.title }}</h3>
+            <h6 class="text-center"> {{ event.date }} </h6>
+        </div>
+        <div class="card-body bg-light text-justify ">
+            <div class="mx-auto">
+                {% if event.image %}
+                <a href="{{ event.get_absolute_url }}">
+                    <div class="mx-auto text-center" style="height:300px;">
+                        <img src="{{ event.image.url }}" class=' img-fluid h-100 mx-auto' />
+                    </div>
+                </a>
+                {% endif %}
+            </div>
+            <div>
+                <p class="card-text " style="height: ">
+                    {{ event.description|safe|linebreaks}}
+                </p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-primary btn-block" href="{{event.apply_link}}">Apply</a>
+        </div>
+    </div>
+</div>
+{%endblock%}
